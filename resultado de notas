@@ -1,0 +1,47 @@
+using System;
+
+namespace _3º
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // variáveis
+            string nome;
+            int matricula;
+            float nota1, nota2, media;
+
+            //Entrada
+            Console.Write("Digite o nome do aluno: ");
+            nome = Console.ReadLine();
+
+            Console.Write("Digite a matricula do aluno: ");
+            matricula = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a nota do primeiro bimestre: ");
+            nota1 = float.Parse(Console.ReadLine());
+
+            Console.Write("Digite a nota do segundo bimestre: ");
+            nota2 = float.Parse(Console.ReadLine());
+
+            //Processamento
+            media = (nota1 + nota2) / 2;
+
+            //Saída
+            Console.WriteLine("A média é: " + media);
+
+            if (media >= 6)
+            {
+                Console.Write($"O aluno {nome}, matricula {matricula} foi APROVADO");
+            }
+            else if (media >= 4)
+            {
+                Console.Write($"O aluno {nome}, matricula {matricula} esta de EXAME");
+            }
+            else
+            {
+                Console.Write($"O aluno {nome}, matricula {matricula} foi REPROVADO");
+            }
+        }
+    }    
+}
